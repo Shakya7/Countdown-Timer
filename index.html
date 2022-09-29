@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="./styles.css" rel="stylesheet">
+</head>
+<body>
+    <h1>Coundown Timer</h1>
+    <div class="container">
+        <div class="selection-cols">
+            <div value="00" class="select hr" min="0" max="23">
+                <button class="up"><i class="fa-solid fa-caret-up"></i></button>
+                <p class="hr-display">00</p>
+                <button class="down"><i class="fa-solid fa-caret-down"></i></button>
+            </div>
+            <div value="00" class="select min" min="0" max="23">
+                <button class="up"><i class="fa-solid fa-caret-up"></i></button>
+                <p class="min-display">00</p>
+                <button class="down"><i class="fa-solid fa-caret-down"></i></button>
+            </div>
+            <div value="00" class="select sec" min="0" max="23">
+                <button class="up"><i class="fa-solid fa-caret-up"></i></button>
+                <p class="sec-display">00</p>
+                <button class="down"><i class="fa-solid fa-caret-down"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="second-container hidden">
+        <div class="time">
+            <span class="time-hr">00</span>
+            <span>:</span>
+            <span class="time-min">00</span>
+            <span>:</span>
+            <span class="time-sec">00</span>
+        </div>
+
+    </div>
+    <div class="finished hidden">Time's Up!!!</div>
+    <div class="buttons">
+        <button class="btn reset hidden"><i class="fa-solid fa-stop"></i></button>
+        <button class="btn play"><i class="fa-solid fa-play"></i></button>
+        <button class="btn pause hidden"><i class="fa-solid fa-pause"></i></button>
+    </div>
+    <script src="./script.js"></script>
+    <script src="./confetti.js"></script>
+</body>
+</html>

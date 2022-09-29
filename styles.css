@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    height:100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:5em;
+    background-image: linear-gradient(to right top, #e0c155, #ffb88e, #ffc2c9, #f2d6ea, #e7e7e7);
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:2rem;
+}
+
+.selection-cols{
+    display:flex;
+
+}
+.select{
+    width:20vw;
+    height:auto;
+    overflow: scroll;
+    text-align: center;
+    border:none;
+    outline:none;
+    font-size: 15vw;
+    color:black;
+    display:flex;
+    flex-direction: column;
+}
+
+.select .hr-display::after{
+    content:"hr";
+    font-size: 2vw;
+}
+.select .min-display::after{
+    content:"min";
+    font-size: 2vw;
+}
+.select .sec-display::after{
+    content:"sec";
+    font-size: 2vw;
+}
+.select::-webkit-scrollbar{
+    display:none;
+}
+
+.select.min{
+    border-left: 2px solid grey;
+    border-right:2px solid grey;
+}
+.buttons{
+    display: flex;
+    gap: 2rem;
+}
+button{
+    width:5vw;
+    align-self: center;
+}
+i{
+    color:rgb(36, 36, 192);
+}
+
+h1{
+    font-family: Ubuntu;
+}
+.btn{
+    width:3rem;
+    height:3rem;
+    border-radius: 50%;
+    border:none;
+    color:#2424c0;
+    box-shadow: 2px 2px 10px grey;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.hidden{
+    display:none;
+}
+
+
+
+.time{
+    font-size: 5rem;
+    font-family: Ubuntu;
+    
+}
+.finished{
+    font-size: 2rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+#my-canvas{
+    position: fixed;
+    top:0;
+    width:100%;
+    height:100vh;
+    z-index: 2;
+}
+
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width:615px){
+    .time{
+        font-size: 13vw;
+    }
+}
+
+@media screen and (max-width:460px){
+    .laps{
+        width:90%;
+    }
+    .toggle{
+        font-size: 5vw;
+    }
+    
+}
+
+@media screen and (max-width:311px){
+    .lap{
+        font-size: 5vw;
+    }
+    h1{
+        font-size: 10vw;
+    }
+}
+
+@media screen and (max-width:227px){
+    .btn{
+        width: 17vw;
+        height:17vw;
+    }
+}
+
+@media screen and (max-width:155px){
+    .btn i{
+        font-size: 8vw;
+    }
+}
